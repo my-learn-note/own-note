@@ -6,7 +6,7 @@
 
 **类图：** 
 
-![image-20210514084616224](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPatter/Memento.png)
+![image-20210514084616224](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPattern/Memento.png)
 
 **组件说明：** 
 

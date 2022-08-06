@@ -1265,7 +1265,7 @@ Integer result = switch (operator) {
   case "+" -> number * 2;
   case "-" -> {
     do some thing;
-    yield number -2; return value
+    yield number -2;
   };
   default -> -1;
 };
@@ -1371,7 +1371,7 @@ abstract sealed class Person permits Man,Women {
 }
 
 //密封实现类，必须有子类，可继续继承
-sealed class Women extends Person {
+sealed class Women extends Person permits Mom {
     @Override
     public String getType() {
         return "woman";
@@ -1477,10 +1477,9 @@ Map<String, Object> data = new HashMap<>();
 data.put("key1", "aaa");
 data.put("key2", 111);
 switch (data.get(0)) {
-case String a -> System.out.println(a);
-case Integer number -> System.out.println(number);
-case List list -> System.out.println(list);
+  case String a -> System.out.println(a);
+  case Integer number -> System.out.println(number);
+  case List list -> System.out.println(list);
 }
 }
 ```
-

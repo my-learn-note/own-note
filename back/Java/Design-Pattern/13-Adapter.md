@@ -4,7 +4,7 @@
 
 **类型：** 结构型
 
-**类图：** ![image-20210513232502268](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPatter/Adapter.png)
+**类图：** ![image-20210513232502268](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPattern/Adapter.png)
 
 **组件说明：** 
 

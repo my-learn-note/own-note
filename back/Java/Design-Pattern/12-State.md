@@ -6,7 +6,7 @@
 
 **类图：** 
 
-![image-20210513200649295](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPatter/State.jpg)
+![image-20210513200649295](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPattern/State.jpg)
 
 **组件说明：** 
 

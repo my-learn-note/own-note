@@ -6,7 +6,7 @@
 
 **类图：**
 
-![image-20210512141240045](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPatter/Builder.png)
+![image-20210512141240045](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPattern/Builder.png)
 
 **组件说明：** 
 
@@ -27,5 +27,5 @@
 
 **缺点：**
 
-- 产品必须有共同点，范围有限制
-- 需要生成的对象内部属性本身相互依赖
+- 要求构建产品的步骤（算法）是不能剧烈变化的，最好是不变的，影响了灵活度
+- 如果产品的内部变化复杂，可能会导致需要定义很多具体建造者类来实现内部复杂的变化，导致系统变得很庞大

@@ -8,7 +8,7 @@
 
 **类图：** 
 
-![image-20210513094008925](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPatter/Observer.png)
+![image-20210513094008925](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/DesignPattern/Observer.png)
 
 **组件说明：** 
 
