@@ -37,7 +37,7 @@ react既可以开发web应用也可以使用同样的语法开发原生应用（
 
 # 环境初始化
 
-`目标任务:`  能够独立使用React脚手架创建一个react项目
+`
 
 ## 1. 使用脚手架创建项目
 
@@ -53,7 +53,7 @@ $ npx create-react-app react-basic
 
 说明： 
 
-1. 1. npx create-react-app 是固定命令，`create-react-app`是React脚手架的名称
+1. 1. npx create-react-app 是固定命令 ，`create-react-app`是React脚手架的名称
    2. react-basic表示项目名称，可以自定义，保持语义化
    3. npx 命令会帮助我们临时安装create-react-app包，然后初始化项目完成之后会自自动删掉，所以不需要全局安装create-react-app
 
@@ -100,10 +100,6 @@ ReactDOM.render(
 
 ## 1. JSX介绍
 
-`目标任务:`  能够理解什么是JSX，JSX的底层是什么
-
-
-
 概念：JSX是 JavaScript XML（HTML）的缩写，表示在 JS 代码中书写 HTML 结构
 
 作用：在React中创建HTML结构（页面UI结构）
@@ -125,7 +121,7 @@ ReactDOM.render(
 
 ## 2. JSX中使用js表达式
 
-`目标任务:`  能够在JSX中使用表达式
+`
 
 **语法**
 
@@ -156,7 +152,7 @@ if 语句/ switch-case 语句/ 变量声明语句，这些叫做语句，不是�
 
 ## 3. JSX列表渲染
 
-`目标任务:`  能够在JSX中实现列表渲染
+`
 
 页面的构建离不开重复的列表结构，比如歌曲列表，商品列表等，我们知道vue中用的是v-for，react这边如何实现呢？
 
@@ -202,7 +198,7 @@ export default App
 
 ## 4. JSX条件渲染
 
-`目标任务:`  能够在JSX中实现条件渲染
+`
 
 
 
@@ -232,7 +228,7 @@ export default App
 
 ## 5. JSX样式处理
 
-`目标任务:`  能够在JSX中实现css样式处理
+`
 
 
 
@@ -302,7 +298,7 @@ export default App
 
 ## 6. JSX注意事项
 
-`目标任务:`  掌握JSX在实际应用时的注意事项
+`
 
 
 
@@ -313,7 +309,7 @@ export default App
 
 ## 格式化配置
 
-`目标任务:`  基于vscode配置格式化工具，提高开发效率
+`
 
 1.  安装vsCode prettier插件 
 2.  修改配置文件 `setting.json` 
@@ -440,7 +436,7 @@ export default App
 
 ## 函数组件
 
-`目标任务:`  能够独立使用函数完成react组件的创建和渲染
+`
 
 
 
@@ -484,7 +480,7 @@ export default App
 
 ## 类组件
 
-`目标任务:`  能够独立完成类组件的创建和渲染
+`
 
 使用 ES6 的 class 创建的组件，叫做类（class）组件
 
@@ -523,7 +519,7 @@ export default App
 
 ## 函数组件的事件绑定
 
-`目标任务:`  能够独立绑定任何事件并能获取到事件对象e
+`
 
 ### 1. 如何绑定事件
 
@@ -667,7 +663,7 @@ export default App
 
 ## 组件状态
 
-`目标任务:`  能够为组件添加状态和修改状态的值
+`
 
 一个前提：在React hook出来之前，函数式组件是没有自己的状态的，所以我们统一通过类组件来讲解
 
@@ -721,9 +717,9 @@ class Counter extends React.Component {
    2. 更新UI
 
 -  思想
-  	数据驱动视图，也就是只要修改数据状态，那么页面就会自动刷新，无需手动操作dom 
+    	数据驱动视图，也就是只要修改数据状态，那么页面就会自动刷新，无需手动操作dom 
 -  注意事项
-  	**不要直接修改state中的值，必须通过setState方法进行修改** 
+    	**不要直接修改state中的值，必须通过setState方法进行修改** 
 
 
 
@@ -760,7 +756,7 @@ class Counter extends React.Component {
 
 ## React的状态不可变
 
-`目标任务:`  能够理解不可变的意义并且知道在实际开发中如何修改状态
+`
 
 **概念**：不要直接修改状态的值，而是基于当前状态创建新的状态值
 
@@ -807,7 +803,7 @@ this.setState({
 
 ## 表单处理
 
-`目标任务:`  能够使用受控组件的方式获取文本框的值
+`
 
 
 
@@ -952,7 +948,7 @@ uuid() // 得到一个独一无二的id
 
 ## 组件通信的意义
 
-`目标任务:`  了解为什么需要组件通信
+`
 
 
 
@@ -968,7 +964,7 @@ uuid() // 得到一个独一无二的id
 
 ## 父传子实现
 
-`目标任务:`  实现父子通信中的父传子，把父组件中的数据传给子组件
+`
 
 
 
@@ -1037,7 +1033,7 @@ export default App
 
 ## props说明
 
-`目标任务:`  知道props传递时的一些注意事项
+`
 
 
 
@@ -1084,7 +1080,7 @@ class App extends React.Component {
 
 ## 子传父实现
 
-`目标任务:`  实现父子通信中的子传父
+`
 
 
 
@@ -1157,7 +1153,7 @@ export default App
 
 ## 兄弟组件通信
 
-`目标任务:`  实现兄弟组件之间的通信
+`
 
 
 
@@ -1237,7 +1233,7 @@ export default App
 
 ## 跨组件通信Context
 
-`目标任务:`  了解Context机制解决的问题和使用步骤
+`
 
 ![img](https://cdn.nlark.com/yuque/0/2022/png/274425/1654490557423-1b93cabb-8bb8-4d6d-91f5-77c5cbddf105.png)
 
@@ -1405,7 +1401,7 @@ export default App
 
 ## children属性
 
-`目标任务:`  掌握props中children属性的用法
+`
 
 
 
@@ -1422,7 +1418,7 @@ export default App
 
 ## props校验-场景和使用
 
-`目标任务:`  掌握组件props的校验写法，增加组件的健壮性
+`
 
 
 
@@ -1464,7 +1460,7 @@ List.propTypes = {
 
 ## props校验-规则说明
 
-`目标任务:`  掌握props常见的规则
+`
 
 
 
@@ -1497,7 +1493,7 @@ optionalObjectWithShape: PropTypes.shape({
 
 ## props校验-默认值
 
-`目标任务:`  掌握如何给组件的props提供默认值
+`
 
 通过 `defaultProps` 可以给组件的props设置默认值，在未传入props的时候生效
 
@@ -1540,7 +1536,7 @@ class List extends Component {
 
 ## 生命周期 - 概述
 
-`目标任务:`  能够说出组件生命周期一共几个阶段
+`
 
 组件的生命周期是指组件从被创建到挂载到页面中运行起来，再到组件不用时卸载的过程，注意，只有类组件才有生命周期（类组件 实例化  函数组件 不需要实例化）
 
@@ -1556,7 +1552,7 @@ http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 ## 生命周期 - 挂载阶段
 
-`目标任务:`  能够说出在组件挂载阶段执行的钩子函数和执行时机
+`
 
 
 
@@ -1572,7 +1568,7 @@ http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 ## 生命周期 - 更新阶段
 
-`目标任务:`  能够说出组件的更新阶段的钩子函数以及执行时机
+`
 
 
 
@@ -1587,7 +1583,7 @@ http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 ## 生命周期 - 卸载阶段
 
-`目标任务:`  能够说出组件的销毁阶段的钩子函数以及执行时机
+`
 
 | 钩子函数             | 触发时机                 | 作用                               |
 | -------------------- | ------------------------ | ---------------------------------- |
