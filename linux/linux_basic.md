@@ -985,6 +985,143 @@ echo 123456 | sed -r 's/(23)/<\1>/g
 
 #### awk
 
+内置变量
+
+| 内置变量 |                                                    |                                            |
+| -------- | -------------------------------------------------- | ------------------------------------------ |
+| NR       | number of record                                   |                                            |
+| NF       | number of field（每行有多个字段）， NF表示最后一列 |                                            |
+| FS       | -F: == -v FS= Field separator 字段分隔符           |                                            |
+| OFS      | output Field separator awk显示每列时，按什么分割   | awk -F , -v OFS=: '{print $2,$3}' test.csv |
+
+##### 取行
+
+| awk           |                 |                               |
+| ------------- | --------------- | ----------------------------- |
+| NR == 1       | 取出某一行      |                               |
+| NR>1 && NR <5 |                 | awk 'NR>=1 && NR <=5' old.txt |
+| /101/,/105/   |                 | awk '/101/, /105/' old.txt    |
+| /old/         | 查找old         |                               |
+| 符号          | > < <= >= == != |                               |
+
+##### 取列
+
+- -F 指定分隔符,默认的是空格 
+- $数字，取出某一列
+- $0：挣行内容
+- ${print $0} 打印
+
+##### 模式匹配
+
+```
+awk -F "[ /]+"  'NR==3{print $3}
+```
+
+**正则：**
+
+- 支持扩展正则
+- 可以精确到某一列,某一列中包含/不包含的内容
+
+```
+awk '$0~/.*1.*/' old.txt
+```
+
+匹配每一行中包含数字1的第1，3，5列
+
+```
+awk -F ',' -v OFS=':' '$0~/.*1.*/{print $1,$3,$5}' test.csv
+```
+
+**表示范围**
+
+- /begin/,/end/ 
+- NR==1, NR==5 
+
+```shell
+# 显示指定时间范围内的某一列
+awk '/11:02:00/,/11:30:00/{print $3}' file
+```
+
+##### 特殊模式 BEGIN END
+
+| 模式    | 含义             | 应用场景                                                     |
+| ------- | ---------------- | ------------------------------------------------------------ |
+| BEGIN{} | 在读取文件前执行 | 1) 进行简单统计计算<br />2) 添加表头<br />3) 用于定义awk变量 |
+| END{}   | 读取后执行       | 1) awk进行统计，先计算，最后END输出结果<br />2) 使用数组，用来输出数组结果 |
+
+统计空行个数
+
+```
+awk '/^.*$/{i++}END {print i}' /etc/services
+```
+
+求1+...+100
+
+```
+ seq 100 | awk '{sum = sum +$1}END {print sum}'
+```
+
+##### awk数组
+
+- 应用于统计日志
+- 统计每个ip出现次数
+- 状态码出现次数
+
+|                  | awk                                                          | shell                                                  |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------ |
+| 形式             | array[0] = 1 array[1] = 2                                    | array[0] = 1 array[1] = 2                              |
+| 使用             | print array[0]                                               | Echo ${array[0]}                                       |
+| 批量输出数组内容 | for( i in array )<br />print i #下标<br />print array[i] #内容 | For i in ${array[*]} <br />do<br />echo ${i}<br />done |
+
+删除数组元素：delete array_name[index]
+
+```shell
+# 使用的字母必须被双引号包裹
+awk 'BEGIN{a[0]="old1";a[1]="old"; print a[0], a[1]}'
+```
+
+案例
+
+```shell
+# 处理一下内容，取出域名并根据域名计数排序
+http://www.e.org/index.html
+http://www.e.org/1.html
+http://www.e2.org/index.html
+http://www.e.org/3.html
+http://www.e3.org/index.html
+http://www.e3.org/ind0ex.html
+
+awk -F '/' '{array[$3]++} END {for(url in array) printf("%s : %d\n",url,array[url])}' url.txt | sort -rnk 2
+```
+
+##### 循环和判断
+
+与C语言基本一致
+
+使用awk脚本文件执行
+
+```shell
+awk -f test.awk filename
+```
+
+##### 自定义函数
+
+```shell
+# 返回最大值
+function find_max(num1, num2)
+{
+  if (num1 > num2)
+    return num1
+  return num2
+}
+```
+
+##### 内置函数
+
+https://www.runoob.com/w3cnote/awk-built-in-functions.html#b2
+
+
+
 ## 磁盘
 
 ## 网络配置
