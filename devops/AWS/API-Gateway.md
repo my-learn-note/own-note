@@ -20,10 +20,9 @@ API Gateway和Lambda的结合可以构成如下图所示的无服务（Serverles
 
 - 可以将API Gateway的日志放到CloudWatch中
 
-- 如果你使用JavaScript/AJAX来跨域访问资源，那么你需要保证在API Gateway上已经开启了
-
-  CORS (Cross-Origin Resource Sharing)功能
+- 如果你使用JavaScript/AJAX来跨域访问资源，那么你需要保证在API Gateway上已经开启了CORS (Cross-Origin Resource Sharing)功能
 
   - 如果没有开启CORS功能，在使用API Gateway做跨域访问的时候，可能会出现错误 *“Origin policy cannot be read at the remote resource?”*
 
     
+
