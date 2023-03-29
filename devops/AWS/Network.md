@@ -342,6 +342,8 @@ Location （这个Location可以是Equinix, CoreSite, Digital Reality的数据�
 
 ### 什么是Transit Gateway
 
+唯一支持IP多播的Gateway
+
 Transit Gateway 是一个网络中转枢纽，您可以使用它来互连您的虚拟私有云 (VPC) 和本地网络。随着您的云基础设施在全球范围内扩
 
 展，区域间对等连接使用 AWS 全球基础设施将中转网关连接在一起。您的数据会自动加密，绝不会在公共互联网上传输。
