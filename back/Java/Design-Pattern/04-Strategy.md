@@ -28,3 +28,5 @@
 
 - 策略类会增多
 - 所有策略类都需要对外暴露
+
+![Strategy](https://picgo-starry.oss-cn-beijing.aliyuncs.com/img/strategy-20240131191952462.jpeg)
